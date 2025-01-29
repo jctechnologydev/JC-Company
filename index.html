@@ -1,161 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+      integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meu Portfólio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <header>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#Expertise">Expertise</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#Expertise">Expertise</a>
-      <a href="#projects">Projetos</a>
-      <a href="#contact">Contato</a>
-    </nav>
-  </header>
+    <section id="home" class="home">
+      <h1 data-aos="fade-up">JC company</h1>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Exploring modern design and technology.
+      </p>
+      <div class="homebg"><img src="./assets/imgs/cidade.avif" alt="" /></div>
+    </section>
 
-  <section id="home" class="home">
-    <h1 data-aos="fade-up">Bem-vindo ao Meu Portfólio</h1>
-    <p data-aos="fade-up" data-aos-delay="200">
-      Explorando design moderno e tecnologia.
-    </p>
-  </section>
+    <section id="Expertise" class="Expertise">
+      <h1 data-aos="fade-right">Our Expertise</h1>
+      <p data-aos="fade-right" data-aos-delay="200"></p>
 
-  <section id="Expertise" class="Expertise">
-    <h1 data-aos="fade-right">Our Expertise</h1>
-    <p data-aos="fade-right" data-aos-delay="200">
-    </p>
-
-    <div class="container">
-      <div class="card">
-        <div class="icon">💻</div>
-        <h2><span class="highlight-pink">Software</span> <br>Development</h2>
-        <div class="card-beautify">
-          <div>
-            &lt;h3&gt;
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            &lt;/h3&gt;
-          </div>
-          <div class="right-beautify">
-            <br>
-            <br>
-            Experienced in both functional
-            and OOP: Dart, Python, Java, JavaScript, TypeScript.
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="icon">⚛️</div>
-        <h2><span class="highlight-blue">Frontend Dev</span> <br>React, NextJS</h2>
-
-        <div class="card-beautify">
-          <div>
-            &lt;h3&gt;
-            <br>
-            <br>
-            <br>
-            <br>
-            &lt;/h3&gt;
-          </div>
-          <div class="right-beautify">
-            <br>
-            Passionate about UI/UX. Over 4 years of development experience in HTML, CSS, JS, React, and Angular
-            frameworks.
+      <div class="container">
+        <div class="card">
+          <div class="icon">💻</div>
+          <h2>
+            <span class="highlight-pink">Software</span> <br />Development
+          </h2>
+          <div class="card-beautify">
+            <div>
+              &lt;h3&gt;
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              &lt;/h3&gt;
+            </div>
+            <div class="right-beautify">
+              <br />
+              <br />
+              Experienced in both functional and OOP: Dart, Python, Java,
+              JavaScript, TypeScript.
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="icon">🖱️</div>
-        <h2><span class="highlight-blue">Flutter & Kotlin Dev</span> <br> Android, iOS</h2>
+        <div class="card">
+          <div class="icon">⚛️</div>
+          <h2>
+            <span class="highlight-blue">Frontend Dev</span> <br />React, NextJS
+          </h2>
 
-        <div class="card-beautify">
-          <div>
-            &lt;h3&gt;
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-  
-            &lt;/h3&gt;
-          </div>
-          <div class="right-beautify">
-            <br>
-            <br>
-            Skilled in developing hybrid mobile apps and cross-platform solutions using the Flutter framework.
+          <div class="card-beautify">
+            <div>
+              &lt;h3&gt;
+              <br />
+              <br />
+              <br />
+              <br />
+              &lt;/h3&gt;
+            </div>
+            <div class="right-beautify">
+              <br />
+              Passionate about UI/UX. Over 4 years of development experience in
+              HTML, CSS, JS, React, and Angular frameworks.
+            </div>
           </div>
         </div>
-      </div>
 
+        <div class="card">
+          <div class="icon">🖱️</div>
+          <h2>
+            <span class="highlight-blue">Flutter & Kotlin Dev</span> <br />
+            Android, iOS
+          </h2>
 
-      <div>
+          <div class="card-beautify">
+            <div>
+              &lt;h3&gt;
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+
+              &lt;/h3&gt;
+            </div>
+            <div class="right-beautify">
+              <br />
+              <br />
+              Skilled in developing hybrid mobile apps and cross-platform
+              solutions using the Flutter framework.
+            </div>
+          </div>
+        </div>
 
         <div>
-          <blockquote>
-            <p> Bad programmers worry about the code. Good programmers worry about data structures and their
-              relationships.</p>
-            <div> <cite>- Linus Torvalds</cite>
-            </div>
-          </blockquote>
+          <div>
+            <blockquote>
+              <p>
+                Bad programmers worry about the code. Good programmers worry
+                about data structures and their relationships.
+              </p>
+              <div><cite>- Linus Torvalds</cite></div>
+            </blockquote>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-  </section>
+    <section id="projects" class="projects">
+      <h2 data-aos="fade-left">Meus Projetos</h2>
+      <div class="project" data-aos="zoom-in">
+        <h3>Projeto 1</h3>
+      </div>
+      <div class="project" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Projeto 2</h3>
+      </div>
+      <div class="project" data-aos="zoom-in" data-aos-delay="400">
+        <h3>Projeto 3</h3>
+      </div>
+    </section>
 
+    <section id="contact" class="contact">
+      <h2 data-aos="fade-up">Contato</h2>
+      <form data-aos="fade-up" data-aos-delay="200">
+        <input type="email" placeholder="Seu Email" required />
+        <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div class="social-links">
+        <a href="#" data-aos="fade-up" data-aos-delay="300">LinkedIn</a>
+        <a href="#" data-aos="fade-up" data-aos-delay="400">GitHub</a>
+        <a href="#" data-aos="fade-up" data-aos-delay="500">Twitter</a>
+      </div>
+    </section>
 
-  <section id="projects" class="projects">
-    <h2 data-aos="fade-left">Meus Projetos</h2>
-    <div class="project" data-aos="zoom-in">
-      <h3>Projeto 1</h3>
-    </div>
-    <div class="project" data-aos="zoom-in" data-aos-delay="200">
-      <h3>Projeto 2</h3>
-    </div>
-    <div class="project" data-aos="zoom-in" data-aos-delay="400">
-      <h3>Projeto 3</h3>
-    </div>
-  </section>
+    <footer>
+      <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
 
-  <section id="contact" class="contact">
-    <h2 data-aos="fade-up">Contato</h2>
-    <form data-aos="fade-up" data-aos-delay="200">
-      <input type="email" placeholder="Seu Email" required />
-      <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <div class="social-links">
-      <a href="#" data-aos="fade-up" data-aos-delay="300">LinkedIn</a>
-      <a href="#" data-aos="fade-up" data-aos-delay="400">GitHub</a>
-      <a href="#" data-aos="fade-up" data-aos-delay="500">Twitter</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="script.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000, // Duração em milissegundos
-      easing: "ease-in-out", // Tipo de transição
-      once: true, // Anima apenas na primeira vez que o elemento é visível
-    });
-  </script>
-</body>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Duração em milissegundos
+        easing: "ease-in-out", // Tipo de transição
+        once: true, // Anima apenas na primeira vez que o elemento é visível
+      });
+    </script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".homebg"), {
+        max: 15,
+        speed: 200,
+        glare: true,
+      });
+    </script>
+  </body>
 </html>

@@ -28,7 +28,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #00aaff;
+  color: #ff7b00;
 }
 
 section {
@@ -37,14 +37,24 @@ section {
 }
 
 .home {
-  background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+  height: 45rem;
   background-size: 200% 200%;
-  animation: backgroundMove 10s ease infinite;
+  background-color: #fa5c0005;
+  /*animation: backgroundMove 15s ease-in-out;*/
   color: #ffffff;
-  padding: 6rem 2rem;
+  padding: 7rem 2rem;
+}
+.homebg {
+  height: 427px;
+  width: 626px;
+  margin-left: 32%;
+  background-image: url(./assets/imgs/cidade.avif);
+}
+.home h1 {
+  font-size: 5rem;
 }
 
-.Expertise,
+.about,
 .projects,
 .contact {
   background: #1a1a1a;
@@ -54,7 +64,7 @@ section {
 .project {
   margin: 2rem auto;
   max-width: 400px;
-  border: 1px solid #00aaff;
+  border: 1px solid #ff7b00;
   padding: 1rem;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -65,18 +75,18 @@ section {
 }
 
 .contact a {
-  color: #00aaff;
+  color: #ffffff;
   text-decoration: none;
   display: inline-block;
   margin: 1rem;
-  border: 1px solid #00aaff;
+  border: 1px solid #ff7b00;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: all 0.3s;
 }
 
 .contact a:hover {
-  background: #00aaff;
+  background: #ff7b00;
   color: #0a0a0a;
 }
 
@@ -90,14 +100,14 @@ form textarea {
   width: 100%;
   padding: 0.8rem;
   margin: 0.5rem 0;
-  border: 1px solid #00aaff;
+  border: 1px solid #ff7b00;
   border-radius: 4px;
   background: #0a0a0a;
   color: #ffffff;
 }
 
 form button {
-  background: #00aaff;
+  background: #ffffff;
   color: #0a0a0a;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -107,7 +117,7 @@ form button {
 }
 
 form button:hover {
-  background: #0088cc;
+  background: #ff7b00;
 }
 
 footer {
@@ -115,7 +125,7 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 1rem 0;
-  border-top: 1px solid #00aaff;
+  border-top: 1px solid #ff7b00;
 }
 
 /* Animações */
@@ -148,7 +158,7 @@ footer {
 }
 
 button {
-  background: #00aaff;
+  background: #ff7b00;
   color: #fff;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -158,6 +168,6 @@ button {
 }
 
 button:hover {
-  background: #0088cc;
+  background: #ff7b00;
   transform: scale(1.1);
 }
