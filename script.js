@@ -5,7 +5,7 @@ function toggleMenu() {
 
 // Example Code Snippets to Display
 const codeSnippets = [
-  "const greeting = 'Hello, World!';",
+  "const greeting = 'Hello, welcome to our portfolio';",
   "function add(a, b) {",
   "  return a + b;",
   "}",
@@ -17,7 +17,7 @@ const codeSnippets = [
   "if (result > 10) {",
   "  console.log('The result is greater than 10.');",
   "}",
-  "// End of example code.",
+  "// Our startup can do great things for you, check it out!",
 ];
 
 // DOM Element
@@ -42,7 +42,7 @@ function typeCode() {
     index = 0; // Reset to loop
     codeContainer.textContent = ""; // Clear container
   }
-  setTimeout(typeCode, 80); // Adjust typing speed here
+  setTimeout(typeCode, 85); // Adjust typing speed here
 }
 
 // Start Typing
