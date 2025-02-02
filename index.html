@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="script.js" />
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
@@ -21,19 +22,18 @@
   <body>
     <header>
       <nav>
-        <a href="#home">Home</a>
-        <a href="#Expertise">Expertise</a>
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contato</a>
+        <a href="#home">// Home</a>
+        <a href="#Expertise">// Expertise</a>
+        <a href="#projects">// projects</a>
+        <a href="#contact">// contact</a>
       </nav>
     </header>
 
     <section id="home" class="home">
-      <h1 data-aos="fade-up">JC company</h1>
       <p data-aos="fade-up" data-aos-delay="200">
         Exploring modern design and technology.
       </p>
-      <div class="homebg"><img src="./assets/imgs/cidade.avif" alt="" /></div>
+      <div class="homebg"><img src="./assets/imgs/== jc.svg" alt="" /></div>
     </section>
 
     <section id="Expertise" class="Expertise">
@@ -134,11 +134,20 @@
       <div class="project" data-aos="zoom-in">
         <h3>Projeto 1</h3>
       </div>
-      <div class="project" data-aos="zoom-in" data-aos-delay="200">
+      <div class="project1" data-aos="zoom-in" data-aos-delay="200">
         <h3>Projeto 2</h3>
       </div>
-      <div class="project" data-aos="zoom-in" data-aos-delay="400">
+      <div class="project1" data-aos="zoom-in" data-aos-delay="400">
         <h3>Projeto 3</h3>
+      </div>
+      <div class="project" data-aos="zoom-in" data-aos-delay="400">
+        <h3>Projeto 4</h3>
+      </div>
+      <div class="project1" data-aos="zoom-in" data-aos-delay="400">
+        <h3>Projeto 5</h3>
+      </div>
+      <div class="project" data-aos="zoom-in" data-aos-delay="400">
+        <h3>Projeto 6</h3>
       </div>
     </section>
 
@@ -170,11 +179,11 @@
       });
     </script>
     <script>
-      VanillaTilt.init(document.querySelectorAll(".homebg"), {
+      /*VanillaTilt.init(document.querySelectorAll(".homebg"), {
         max: 15,
         speed: 200,
         glare: true,
-      });
+      });*/
     </script>
   </body>
 </html>

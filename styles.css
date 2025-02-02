@@ -39,7 +39,7 @@ section {
 .home {
   height: 45rem;
   background-size: 200% 200%;
-  background-color: #fa5c0005;
+  background-color: #00000085;
   /*animation: backgroundMove 15s ease-in-out;*/
   color: #ffffff;
   padding: 7rem 2rem;
@@ -47,11 +47,8 @@ section {
 .homebg {
   height: 427px;
   width: 626px;
-  margin-left: 32%;
-  background-image: url(./assets/imgs/cidade.avif);
-}
-.home h1 {
-  font-size: 5rem;
+  margin-left: 25%;
+  background-image: url(./);
 }
 
 .about,
@@ -60,10 +57,23 @@ section {
   background: #1a1a1a;
   color: #ffffff;
 }
-
+.projects {
+  flex-wrap: wrap;
+}
 .project {
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  max-width: 300px;
+  height: 400px;
+  border: 1px solid #ff7b00;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.project1 {
   margin: 2rem auto;
   max-width: 400px;
+  height: 600px;
   border: 1px solid #ff7b00;
   padding: 1rem;
   border-radius: 8px;
