@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Meu Portfólio</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="script.js" />
-    </head>
 
-    <body>
-        <header>
-            <nav>
-                <a href="#home">// Home</a>
-                <a href="#Expertise">// Expertise</a>
-                <a href="#projects">// projects</a>
-                <a href="#contact">// contact</a>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="script.js" />
+</head>
 
-        <section id="Experience" class="experience-content">
-            <h1>Church Member Register App</h1>
+<body>
+    <header>
+        <nav>
+            <a href="#home">// Home</a>
+            <a href="#Expertise">// Expertise</a>
+            <a href="#projects">// projects</a>
+            <a href="#contact">// contact</a>
+        </nav>
+    </header>
 
-            <div>
-                <div class="experience-description">
-                    <p>I was a member of the Church of Jesus Christ of Latter-day Saints (LDS Church) from 2015 to 2021. I was a member of the LDS Church from 2015 to 2021.</p>
-                    <p>I have been a member of the LDS Church since 2015. I was a member of the LDS Church from 2015 to 2021.</p>
+    <section id="Experience">
+        <h1>Church Member Register App</h1>
+
+        <div class="experience-content">
+            <div class="experience-description">
+                <p>The Church Member Registration App is designed to simplify the process of managing members and tracking attendance at the Adventist Church in São Mateus de Oliveira, Famalicão. By using Firebase for real-time data storage, this app allows church leaders to efficiently manage church activities, track member presence, and stay connected with the congregation.</p>
+    
+                <p>Check out the full source code, documentation, and reports for the Church Member Registration App on <a href="https://github.com/">GitHub</a>.</p>
+                
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Member Registration:</strong> Easily create accounts for each church member, with personal details securely stored in Firebase.</li>
+                    <li><strong>Attendance Tracking:</strong> Record member attendance and absences during services, creating a complete log of presence for future reference.</li>
+                    <li><strong>Anniversary Reminders:</strong> Get notified about key events like birthdays, marriages, and baptisms, ensuring timely celebrations and well-wishes.</li>
+                    <li><strong>Reports Generation:</strong> Generate comprehensive historical reports (PDF) for every trimester, allowing church leaders to keep track of attendance and other important data.</li>
+                    <li><strong>Direct Communication:</strong> The app allows leaders to make quick phone calls directly to members, ensuring seamless communication.</li>
+                </ul>
+                
+                <h2>Skills</h2>
+                <p>Kotlin, Firebase, Android Development, Design Systems</p>
+
+                <div class="gallery-container">
+                    <div class="gallery">
+                        <img src="https://joeljonassi.github.io/assets/images/Church%20App/img0.jpeg"
+                            alt="church-member-register-app">
+                        <img src="https://joeljonassi.github.io/assets/images/Church%20App/img2.jpeg"
+                            alt="church-member-register-app">
+                        <img src="https://joeljonassi.github.io/assets/images/Church%20App/img3.jpeg"
+                            alt="church-member-register-app">
+                        <img src="https://joeljonassi.github.io/assets/images/Church%20App/img4.jpeg"
+                            alt="church-member-register-app">
+                        <img src="https://joeljonassi.github.io/assets/images/Church%20App/img6.jpeg"
+                            alt="church-member-register-app">
+                        <img src="https://joeljonassi.github.io/assets/images/Church%20App/img7.jpeg" height="400px"
+                            alt="church-member-register-app">
+                        <img src="https://joeljonassi.github.io/assets/images/Church%20App/img8.jpeg"
+                            alt="church-member-register-app">
+                    </div>
+                    <div class="modal" id="modal">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img id="modalImage">
+                    </div>
                 </div>
+            </div>
 
-                <div class="experience-details">
-                    <h2>Experience Details</h2>
-          
+            
+            <div class="experience-details">
                 <tr>
                     <th>Date</th>
                     <td>2015-2021</td>
@@ -50,10 +86,11 @@
                     <th>Duration</th>
                     <td>3 years</td>
                 </tr>
-        
-                </div>
-            
 
-                
-        </section>
+            </div>
+        </div>
+        
+    </section>
+    <script src="script.js"></script>
+
 </html>

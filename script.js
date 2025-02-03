@@ -60,3 +60,17 @@ document.querySelectorAll('.card').forEach((card) => {
   });
 });
 
+const images = document.querySelectorAll('.gallery img');
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        function openModal(src) {
+            modal.style.display = 'flex';
+            modalImage.src = src;
+        }
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+        images.forEach(img => {
+            img.addEventListener('click', () => openModal(img.src));
+        });
+
