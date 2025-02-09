@@ -29,7 +29,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ff7b00;
+  color: #ee4406;
 }
 
 section {
@@ -66,7 +66,7 @@ section {
   height: 600px;
   display: flex;
   align-items: center;
-  margin-left: 43%;
+  margin-left: 40%;
   padding-right: 50%;
   justify-content: center;
   background-repeat: no-repeat;
@@ -94,19 +94,19 @@ pre {
 }
 
 .keyword {
-  color: #ff9900;
+  color: #ee4406;
   font-weight: bold;
 }
 
 .text {
-  color: #00ff00;
+  color: #ececec;
 }
 
 /* Efeito de digitação */
 .code-line {
   display: inline-block;
   overflow: hidden;
-  border-right: 3px solid #ee4060;
+  border-right: 3px solid #ee4406;
   animation: typing 4s steps(40, end) forwards, blinkCursor 0.6s infinite;
 }
 
@@ -123,17 +123,12 @@ pre {
     width: 0;
   }
   to {
-    width: 35%;
+    width: 75%;
   }
 }
-#code-container {
-  font-size: 14px;
-  line-height: 1.5;
-  white-space: pre-wrap;
-  overflow: hidden;
-  width: 90%;
-  max-height: 90%;
-  animation: scroll 10s linear infinite;
+.code-container {
+  width: 900px;
+  margin-top: 15%;
 }
 
 /* ---- Scrolling Effect ---- */
@@ -230,7 +225,7 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 1rem 0;
-  border-top: 1px solid #ff7b00;
+  border-top: 1px solid #ee4406;
 }
 
 /* Animações */
@@ -263,7 +258,7 @@ footer {
 }
 
 button {
-  background: #ff7b00;
+  background: #ee4406;
   color: #fff;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -273,7 +268,7 @@ button {
 }
 
 button:hover {
-  background: #ff7b00;
+  background: #ee4406;
   transform: scale(1.1);
 }
 
@@ -284,12 +279,13 @@ button:hover {
   gap: 1.5rem;
   flex-wrap: wrap;
   padding: 1rem;
+  margin-left: 15%;
 }
-
 .card {
   background-color: #1e1e1e;
   border-radius: 16px;
   padding: 1.5rem;
+  align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   text-align: center;
   flex: 1;
@@ -340,6 +336,13 @@ button:hover {
     flex-direction: column;
     align-items: center;
   }
+}
+section h2 {
+  font-size: 5rem;
+}
+section h1 {
+  font-size: 5rem;
+  text-align: center;
 }
 
 .citation {
