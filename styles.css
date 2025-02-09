@@ -147,32 +147,6 @@ pre {
   background: #202020;
   color: #ffffff;
 }
-.projects {
-  flex-wrap: wrap;
-}
-.project {
-  flex-wrap: wrap;
-  margin: 2rem auto;
-  max-width: 300px;
-  height: 400px;
-  border: 1px solid #ff7b00;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-.project1 {
-  margin: 2rem auto;
-  max-width: 400px;
-  height: 600px;
-  border: 1px solid #ff7b00;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.project:hover {
-  transform: scale(1.05);
-}
 
 .contact a {
   color: #ffffff;
@@ -457,8 +431,8 @@ h1 {
   text-align: center;
 }
 
-/* END OF EXPERIENCE DETAILS */
 
+/* END OF EXPERIENCE DETAILS */
 
 
 /* PROJECTS TIMELINE */
