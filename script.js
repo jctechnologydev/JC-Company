@@ -3,74 +3,71 @@ function toggleMenu() {
   menu.classList.toggle('active');
 }
 
-// Example Code Snippets to Display
-const codeSnippets = [
-  "const greeting = 'Hello, welcome to our portfolio';",
-  "function add(a, b) {",
-  "  return a + b;",
-  "}",
-  "let result = add(5, 10);",
-  "console.log(result);",
-  "for (let i = 0; i < 10; i++) {",
-  "  console.log('Iteration:', i);",
-  "}",
-  "if (result > 10) {",
-  "  console.log('The result is greater than 10.');",
-  "}",
-  "// Our startup can do great things for you, check it out!",
-];
+const canvas = document.getElementById("hexCanvas");
+const ctx = canvas.getContext("2d");
 
-// DOM Element
-const codeContainer = document.getElementById("code-container");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-// Typing Effect Function
-let index = 0;
-let charIndex = 0;
+const hexRadius = 80;
+const hexWidth = Math.sqrt(10) * hexRadius;
+const hexHeight = 2 * hexRadius;
+const hexOffsetY = hexHeight * 2/4;
+const hexOffsetX = hexWidth;
+const glowColor = "#ee4406";
+let mouseX = null, mouseY = null;
 
-function typeCode() {
-  if (index < codeSnippets.length) {
-    const currentSnippet = codeSnippets[index];
-    if (charIndex < currentSnippet.length) {
-      codeContainer.textContent += currentSnippet[charIndex];
-      charIndex++;
-    } else {
-      codeContainer.textContent += "\n";
-      charIndex = 0;
-      index++;
-    }
-  } else {
-    index = 0; // Reset to loop
-    codeContainer.textContent = ""; // Clear container
-  }
-  setTimeout(typeCode, 85); // Adjust typing speed here
-}
-
-// Start Typing
-typeCode();
-
-// Function to scale when mouse over Expertise element
-// Devoloped on 26/01/2025 
-document.querySelectorAll('.card').forEach((card) => {
-  card.addEventListener('mouseover', () => {
-    card.style.transform = 'scale(1.05)';
-    card.style.transition = 'transform 0.3s ease';
-  });
-  card.addEventListener('mouseout', () => {
-    card.style.transform = 'scale(1)';
-  });
+// Eventos de mouse para interação
+canvas.addEventListener("mousemove", (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
 });
 
-const images = document.querySelectorAll('.gallery img');
-        const modal = document.getElementById('modal');
-        const modalImage = document.getElementById('modalImage');
-        function openModal(src) {
-            modal.style.display = 'flex';
-            modalImage.src = src;
-        }
-        function closeModal() {
-            modal.style.display = 'none';
-        }
-        images.forEach(img => {
-            img.addEventListener('click', () => openModal(img.src));
-        });
+canvas.addEventListener("mouseleave", () => {
+    mouseX = null;
+    mouseY = null;
+});
 
+// Função para desenhar hexágonos
+function drawHexagon(x, y, radius, glow) {
+    ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+        let angle = (Math.PI / 3) * i;
+        let px = x + radius * Math.cos(angle);
+        let py = y + radius * Math.sin(angle);
+        ctx.lineTo(px, py);
+    }
+    ctx.closePath();
+    ctx.strokeStyle = glow ? glowColor : "transparent";
+    ctx.lineWidth = glow ? 2 : 2;
+    ctx.shadowBlur = glow ? 20 : 400;
+    ctx.shadowColor = glow ? glowColor : "transparent";
+    ctx.stroke();
+}
+
+// Função de animação
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let row = 0; row < canvas.height / hexOffsetY; row++) {
+        for (let col = 0; col < canvas.width / hexOffsetX; col++) {
+            let x = col * hexOffsetX + (row % 2 === 1 ? hexOffsetX / 2 : 0);
+            let y = row * hexOffsetY;
+            
+            let distance = mouseX !== null ? Math.hypot(mouseX - x, mouseY - y) : Infinity;
+            let glow = distance < 100;
+
+            drawHexagon(x, y, hexRadius, glow);
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+// Ajuste do canvas em redimensionamento
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
