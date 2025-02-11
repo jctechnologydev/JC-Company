@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background: #202020;
+  background: #20202000;
   padding: 40px 37%;
   position: fixed;
   top: 0;
@@ -24,6 +24,7 @@ header {
 header.roll {
   background: #ee4406;
   padding: 20px 37%;
+  border-radius: 0px 0px 10px 10px;
 }
 header.roll a {
   color: black;
