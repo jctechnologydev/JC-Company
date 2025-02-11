@@ -9,10 +9,20 @@ body {
 
 header {
   background: #202020;
-  padding: 1rem 2rem;
-  position: sticky;
+  padding: 40px 37%;
+  position: fixed;
   top: 0;
-  z-index: 400;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: 0.5s;
+}
+header.roll {
+  background: #ee4406;
+  padding: 20px 37%;
+}
+header.roll a {
+  color: black;
 }
 
 nav {
@@ -31,6 +41,9 @@ nav a {
 nav a:hover {
   color: #ee4406;
 }
+nav.roll a:hover {
+  color: #ececec;
+}
 
 section {
   padding: 4rem 2rem;
@@ -38,6 +51,7 @@ section {
 }
 
 .home {
+  display: flex;
   height: 45rem;
   background-size: 200% 200%;
   background: #202020;
@@ -52,23 +66,20 @@ section {
   background-color: rgb(0, 255, 13);
 }*/
 /* ---- Background ---- */
-
-.diagonal {
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-  width: 100%;
+.container-home {
+  display: flex;
+  justify-content: center;
+  padding-right: 20%;
+  height: 800px;
+  width: 1900px;
 }
-
 .background {
   position: absolute;
-  width: 00px;
+  width: 600px;
   height: 600px;
   display: flex;
-  align-items: center;
-  margin-left: 40%;
-  padding-right: 50%;
-  justify-content: center;
+  margin-left: 35%;
+  padding-top: 25%;
   background-repeat: no-repeat;
   background-image: url(./assets/imgs/==\ jc.svg);
 }
@@ -127,8 +138,10 @@ pre {
   }
 }
 .code-container {
-  width: 900px;
-  margin-top: 15%;
+  padding-top: 17%;
+  padding-right: 15%;
+  width: 800px;
+  height: 200px;
 }
 
 /* ---- Scrolling Effect ---- */
@@ -174,7 +187,7 @@ form textarea {
   width: 100%;
   padding: 0.8rem;
   margin: 0.5rem 0;
-  border: 1px solid #ff7b00;
+  border: 1px solid #ee4406;
   border-radius: 4px;
   background: #0a0a0a;
   color: #ffffff;
@@ -191,7 +204,7 @@ form button {
 }
 
 form button:hover {
-  background: #ff7b00;
+  background: #ee4406;
 }
 
 footer {
@@ -266,6 +279,17 @@ button:hover {
   min-width: 300px;
   max-width: 350px;
 }
+.card2 {
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 1.5rem;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  flex: 1;
+  min-width: 400px;
+  max-width: 450px;
+}
 
 .card .icon {
   font-size: 3rem;
@@ -332,7 +356,7 @@ section h1 {
 }
 
 .line::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 2px;
   background-color: white;
@@ -431,12 +455,9 @@ h1 {
   text-align: center;
 }
 
-
 /* END OF EXPERIENCE DETAILS */
 
-
 /* PROJECTS TIMELINE */
-
 
 .projects {
   flex-wrap: wrap;
@@ -458,7 +479,6 @@ h1 {
   left: 55%;
 }
 
-
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -466,10 +486,10 @@ h1 {
 }
 
 .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
-  width: 6px;
-  background-color: white;
+  width: 2px;
+  background-color: #ee4406;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -483,21 +503,20 @@ h1 {
   width: 100%;
 }
 
-
 .timeline-container::after {
-  content: '';
+  content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: rgb(255, 252, 252);
-  border: 3px solid #3422da;
+  width: 2px;
+  height: 2px;
+  background-color: #ee4406;
+  border: 3px solid #ee4406;
   top: -15px;
   border-radius: 50%;
   z-index: 1;
 }
 
 .project-left-circule::after {
-  right: -23%;
+  right: -20%;
 }
 
 .project-left img {
@@ -507,6 +526,11 @@ h1 {
   display: block;
   border-radius: 25px;
 }
+.project-left {
+  height: 400px;
+  width: 400px;
+  background-color: #1e1e1e;
+}
 
 .project-right img {
   width: 100%;
@@ -515,12 +539,18 @@ h1 {
   display: block;
   border-radius: 25px;
 }
-
-.project-right::after {
-  left: -27%;
+.project-right {
+  height: 600px;
+  width: 1000px;
+  background-color: #1e1e1e;
 }
 
-a:link, a:visited {
+.project-right::after {
+  left: -24%;
+}
+
+a:link,
+a:visited {
   color: inherit;
   text-decoration: none;
 }

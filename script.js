@@ -71,3 +71,8 @@ window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+
+window.addEventListener("scroll", function(){
+  let header = document.querySelector('#header')
+  header.classList.toggle('roll', window.scrollY > 0)
+});
