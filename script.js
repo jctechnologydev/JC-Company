@@ -82,3 +82,16 @@ window.addEventListener("scroll", function(){
   let nav = document.querySelector('#nav')
   nav.classList.toggle('roll', window.scrollY > 0)
 });
+
+const myObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('showicones')
+        } else{
+            entry.target.classList.remove('showicones')
+        }
+    })
+});
+const elements = document.querySelectorAll('.icones')
+
+elements.forEach((element) => myObserver.observe(element))
