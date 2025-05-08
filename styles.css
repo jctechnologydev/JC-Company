@@ -432,7 +432,7 @@ h1 {
   height: 200px;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  left: 10%;
+  left: 9.9%;
 }
 
 .project-right {
@@ -510,7 +510,7 @@ h1 {
 }
 
 .project-right::after {
-  left: -24%;
+  left: -24.3%;
 }
 
 a:link,
