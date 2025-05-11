@@ -83,7 +83,7 @@ section {
   width: 600px;
   height: 600px;
   display: flex;
-  margin-left: 35%;
+  margin-left: 58%;
   padding-top: 25%;
   background-repeat: no-repeat;
   background-image: url(./assets/imgs/==\ jc.svg);
@@ -143,6 +143,7 @@ pre {
   }
 }
 .code-container {
+  margin-left: 15%;
   padding-top: 17%;
   padding-right: 15%;
   width: 800px;
@@ -724,7 +725,7 @@ footer {
   transition: 0.3s;
 }
 .right form .btn button:hover {
-  background: #000;
+  background: #fca402;
 }
 .bottom center {
   padding: 5px;
@@ -740,6 +741,7 @@ footer {
 }
 .bottom center a:hover {
   text-decoration: underline;
+  color: #ff7b00;
 }
 @media screen and (max-width: 900px) {
   footer {
@@ -756,26 +758,65 @@ footer {
 }
 .grid-container {
   width: 100vw;
-  height: 800px;
+  height: 2400px;
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-gap: 40px;
+  grid-template-columns: repeat(3, 400px);
+  grid-gap: 60px;
   justify-content: center;
 }
 
 .shape {
-  background-color: #ee4060;
-  border-radius: 8px;
+  background-color: #c706ee;
+  opacity: 0;
+  transform: translateY(60px) scale(0.5);
+  transition: opacity 1s ease-out, transform 1.2s ease-out;
+  will-change: opacity, transform;
+}
+
+.shape.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.shape.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Quadrado: largura e altura iguais */
 .square {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
+  margin-top: 70%;
+  background-color: #ff007f;
 }
-
+.square1 {
+  width: 400px;
+  height: 400px;
+  margin-top: 68%;
+  background-color: #007bff;
+}
+.square2 {
+  width: 400px;
+  height: 400px;
+  margin-top: -120%;
+  background-color: red;
+}
 /* Retângulo em pé: mais alto que largo */
 .rectangle {
-  width: 300px;
-  height: 360px;
+  width: 400px;
+  height: 600px;
+  margin-top: 0%;
+  background-color: #ff007f;
+}
+.rectangle1 {
+  width: 400px;
+  height: 600px;
+  margin-top: -80%;
+  background-color: #007bff;
+}
+.rectangle2 {
+  width: 400px;
+  height: 600px;
+  margin-top: -80%;
+  background-color: red;
 }
