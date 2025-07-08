@@ -1,6 +1,9 @@
 :root {
   --primary-color: #007bff;
 }
+* {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -10,6 +13,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   background-color: #1a1a1a;
+  scroll-behavior: smooth;
   background-image: repeating-linear-gradient(
     45deg,
     rgba(255, 102, 0, 0.02) 0px,
@@ -285,6 +289,7 @@ button {
 button:hover {
   background: #ee4406;
   transform: scale(1.1);
+  box-shadow: 0 0 10px #ff660088;
 }
 
 /* START OUR EXPERTISE*/
@@ -577,10 +582,10 @@ a:visited {
   text-decoration: none;
 }
 .icones i {
-  font-weight: 30;
+  font-weight: 600;
   color: #ff6600;
   text-shadow: 0 0 5px #ff660044;
-  background: linear-gradient(45deg, #ff6600, #ffaa00);
+  background: linear-gradient(45deg, #ff7300, #ff6600);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -793,12 +798,12 @@ footer {
   }
 }
 .grid-container {
-  width: 100vw;
+  width: 100%;
   height: 2400px;
   display: grid;
   grid-template-columns: repeat(3, 400px);
-  grid-gap: 200px;
-  margin-left: 3%;
+  grid-gap: 160px;
+  user-select: none;
 }
 
 .shape {
@@ -823,7 +828,23 @@ footer {
   height: 400px;
   margin-top: 70%;
   background-color: #ff007f;
+  user-select: none;
+}
+.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   overflow: hidden;
+  user-select: none;
+}
+.square1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  user-select: none;
 }
 .square1 {
   width: 600px;
@@ -832,12 +853,22 @@ footer {
   background-color: #007bff;
   overflow: hidden;
   position: relative;
+  user-select: none;
 }
 .square2 {
   width: 600px;
   height: 400px;
   margin-top: -120%;
   background-color: red;
+  user-select: none;
+}
+.square2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  user-select: none;
 }
 /* Retângulo em pé: mais alto que largo */
 .rectangle {
