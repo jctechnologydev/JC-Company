@@ -408,8 +408,6 @@ h1 {
 
 /* END OF EXPERIENCE DETAILS */
 
-
-
 .experience-content {
   width: 80%;
   background-color: white;
@@ -419,9 +417,9 @@ h1 {
   border-radius: 25px;
   color: black;
 }
-.top-title{
+.top-title {
   display: flex;
-  width:100%;
+  width: 100%;
 }
 
 .experience-content .btn {
@@ -460,10 +458,10 @@ h1 {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; 
+  gap: 10px;
 }
 
-.features-box{
+.features-box {
   height: 230px;
   border-radius: 15px;
   padding: 20px;
@@ -475,22 +473,20 @@ h1 {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
 }
 
-.features-box img{
+.features-box img {
   width: 30px;
   margin-inline: auto;
   margin-bottom: 10px;
-
 }
 
-.skills{
+.skills {
   margin: auto;
   align-items: center;
   justify-content: center;
   display: flex;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .gallery {
@@ -501,7 +497,6 @@ h1 {
 .complete-gallery {
   display: flex;
 }
-
 
 .separator {
   display: block;
@@ -520,7 +515,6 @@ h1 {
     display: none;
   }
 }
-
 
 hr {
   unset: all;
@@ -1013,11 +1007,12 @@ footer {
 }
 /* Retângulo em pé: mais alto que largo */
 .rectangle {
-  width: 400px;
+  width: 290px;
   height: 600px;
   margin-top: 0%;
-  margin-left: 25%;
+  margin-left: 38%;
   box-shadow: 0px 0px 25px #1a1a1a;
+  border-radius: 25px;
 }
 .rectangle :hover {
   transform: scale(1.05);
@@ -1030,13 +1025,15 @@ footer {
   object-position: center;
   overflow: hidden;
   user-select: none;
+  border-radius: 25px;
 }
 .rectangle1 {
-  width: 400px;
+  width: 290px;
   height: 600px;
   margin-top: -80%;
-  margin-left: 25%;
+  margin-left: 38%;
   box-shadow: 0px 0px 25px #1a1a1a;
+  border-radius: 25px;
 }
 .rectangle1 :hover {
   transform: scale(1.05);
@@ -1049,13 +1046,15 @@ footer {
   object-position: center;
   overflow: hidden;
   user-select: none;
+  border-radius: 25px;
 }
 .rectangle2 {
-  width: 400px;
+  width: 290px;
   height: 600px;
   margin-top: -80%;
-  margin-left: 25%;
+  margin-left: 38%;
   box-shadow: 0px 0px 25px #1a1a1a;
+  border-radius: 25px;
 }
 .rectangle2 :hover {
   transform: scale(1.05);
@@ -1068,4 +1067,26 @@ footer {
   object-position: center;
   overflow: hidden;
   user-select: none;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .square,
+  .square1,
+  .square2,
+  .rectangle,
+  .rectangle1,
+  .rectangle2 {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .about{
+    color: red;
+  }
 }
