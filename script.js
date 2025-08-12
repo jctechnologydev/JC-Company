@@ -135,3 +135,7 @@ window.addEventListener('scroll', () => {
         shape.style.transform = `translateY(${50 * (1 - visibleRatio)}px)`;
     });
 });
+
+document.getElementById('open_btn').addEventListener('click', function () {
+    document.getElementById('sidebar').classList.toggle('open-sidebar');
+});
