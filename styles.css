@@ -1072,9 +1072,8 @@ footer {
 
 /* dispositivos moveis */
 #sidebar {
-  display: flex;
+  display: fixed !important;
   flex-direction: column;
-
   justify-content: space-between;
   background-color: #1f1f1f;
   top: 0; /* ANCORAR no topo */
@@ -1083,7 +1082,7 @@ footer {
   height: 100%;
   width: 40px;
   border-radius: 0px 18px 18px 0px;
-  position: absolute !important;
+  position: fixed !important;
   transition: all 0.5s;
   min-width: 82px;
   z-index: 99999;
@@ -1095,7 +1094,7 @@ footer {
 #sidebar_content {
   padding: 12px;
   padding-top: 70px;
-  position: absolute;
+  position: fixed;
 }
 #user {
   display: flex;
@@ -1166,6 +1165,7 @@ footer {
   justify-content: center;
   display: flex;
   top: 30px;
+ 
   right: -50px;
   background-color: #ee4406;
   color: #e3e9f7;
@@ -1183,7 +1183,7 @@ footer {
   cursor: pointer;
 }
 #open_btn_icon {
-  transition: transform 0.3s ease;
+  transition: transform 3s ease;
 }
 
 .open-sidebar #open_btn_icon {
