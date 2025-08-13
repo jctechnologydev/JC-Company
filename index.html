@@ -89,12 +89,15 @@
           </a>
         </li>
       </ul>
-      <button id="open_btn">
-        <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
-      </button>
-    </div>
 
+    </div>
+    <button id="open_btn">
+      <i id="open_btn_icon" class="fa-solid fa-bars"></i>
+    </button>
   </nav>
+
+
+
 
 
   <section id="home" class="home">
@@ -115,34 +118,10 @@
 
     <canvas id="hexCanvas"></canvas>
   </section>
-  <section>
-    <div class="knowrow" id="">
-      <div class="icones">
-        <i class="bi bi-globe-europe-africa"></i>
-        <div class="desccard">
-          No limtis, no boundaries, just pure innovation.
-        </div>
-      </div>
-      <div class="icones">
-        <i class="bi bi-graph-up-arrow"></i>
-        <div class="desccard">
 
-          Massive and rapid growth.
-        </div>
-      </div>
-      <div class="icones">
-        <i class="bi bi-braces"></i>
-        <div class="desccard">
-          Clean, structured, organized and modern code.
-        </div>
-      </div>
-      <div class="icones">
-        <i class="bi bi-people-fill"></i>
-        <div class="desccard">
-          A prepared and experienced team.
-        </div>
-      </div>
-    </div>
+  </div>
+
+  </div>
   </section>
   <section class="button-container">
     <button class="button-download">
@@ -279,6 +258,55 @@
           </a>
         </div>
         </div>
+      </section>
+      <section class="page" id="portifolio">
+        <h1 class="container-title">PORTIFÓLIO</h1>
+        <hr class="line-left-to-right" />
+        <div class="animated-slider-container">
+          <div class="animated-slider-card-block">
+            <div class="card-block-wrap">
+              <div class="card" id="card_1" onclick="console.log(this.id)">
+                <img src="./assets/imgs/sattus scss.png" />
+                <div class="play modal-video-content" onclick="showVideo()"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card" id="card_2" onclick="console.log(this.id)">
+                <img src="./assets/imgs/churchapp/img0.jpeg" />
+                <div class="play modal-video-content" onclick="showVideo()"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card" id="card_3" onclick="console.log(this.id)">
+                <img src="./assets/imgs/prof tube.png" />
+                <div class="play modal-video-content" onclick="showVideo()"><i class="fa-solid fa-play"></i></div>
+              </div>
+              <div class="card" id="card_4" onclick="console.log(this.id)">
+                <img src="./assets/imgs/phorma.png" />
+                <div class="play modal-video-content" onclick="showVideo()"><i class="fa-solid fa-play"></i></div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="btn-wrap">
+            <a href="javascript:void(0);" onclick="getCardAnimated(1, true)" class="btn focus" id="card_cursor_1"></a>
+            <a href="javascript:void(0);" onclick="getCardAnimated(2, true)" class="btn" id="card_cursor_2"></a>
+            <a href="javascript:void(0);" onclick="getCardAnimated(3, true)" class="btn" id="card_cursor_3"></a>
+            <a href="javascript:void(0);" onclick="getCardAnimated(4, true)" class="btn" id="card_cursor_4"></a>
+          </div>
+          <div>
+            <div class="card-content" id="card_content_1">
+
+            </div>
+            <div class="card-content" id="card_content_2">
+
+            </div>
+            <div class="card-content" id="card_content_3">
+
+            </div>
+            <div class="card-content" id="card_content_4">
+
+            </div>
+          </div>
+        </div>
+
       </section>
 
 

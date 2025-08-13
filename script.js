@@ -136,6 +136,109 @@ window.addEventListener('scroll', () => {
     });
 });
 
-document.getElementById('open_btn').addEventListener('click', function () {
-    document.getElementById('sidebar').classList.toggle('open-sidebar');
+document.addEventListener('DOMContentLoaded', function () {
+    const openBtn = document.getElementById('open_btn');
+    const sidebar = document.getElementById('sidebar');
+
+    if (openBtn && sidebar) {
+        openBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('open-sidebar');
+        });
+    }
 });
+
+/* Animated Slider cards Styles */
+
+var shadow = '0 20px 50px rgba(0,34,45,0.5)';
+
+function styles(item_id, x, y, z, opacity, shadow, focus = false) {
+    let element = document.getElementById(item_id);
+    element.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, ' + z + 'px)';
+    element.style.opacity = opacity;
+    element.style.boxShadow = shadow;
+    element.style.cursor = focus ? 'pointer' : 'unset';
+}
+
+let currentCursor = 1;
+let cardLength = 0;
+let timeoutCardAnimated = null;
+
+window.addEventListener("load", () => {
+    cardLength = document.getElementsByClassName('card-block-wrap')[0].children.length;
+    getCardAnimated(currentCursor)
+    loopCardAnimated();
+});
+
+
+function focusCursor(index) {
+    let cursor = document.getElementById('card_cursor_' + index);
+    cursor.classList.add('focus');
+}
+function removeFocusCursor(index) {
+    let cursor = document.getElementById('card_cursor_' + index);
+    cursor.classList.remove('focus');
+}
+
+function showCardContent(index) {
+    let cardContent = document.getElementById('card_content_' + index);
+    cardContent.style.display = 'block';
+}
+function hideCardContent(index) {
+    let cardContent = document.getElementById('card_content_' + index);
+    cardContent.style.display = 'none';
+}
+
+function getCardAnimated(index, manual = false) {
+    if (manual) {
+
+        oldCursor = currentCursor
+        currentCursor = index;
+        clearTimeout(timeoutCardAnimated)
+        setTimeout(loopCardAnimated, 10000)
+
+        if (index == oldCursor) {
+            return
+        }
+    }
+    for (let i = 1; i <= cardLength; i++) {
+        let x_prop = (Math.floor(Math.random() * 40) * (i - index) * (Math.floor(Math.random() * 3) - 1));
+        x_prop = x_prop > 50 ? 50 : x_prop;
+        x_prop = x_prop < -50 ? -50 : x_prop;
+
+
+        let y_prop = Math.floor(Math.random() * 30) + (10 * i);
+        y_prop = y_prop > 60 ? 60 : y_prop;
+        y_prop = y_prop < -60 ? -60 : y_prop;
+
+        let z_prop = Math.floor(Math.random() * 50) * -1;
+        let opacity_prop = 0.6;
+        let shadow_prop = 'none'
+        if (index == i) {
+            x_prop = 0;
+            y_prop = 0;
+            z_prop = 50;
+            opacity_prop = 1;
+            shadow_prop = shadow;
+            showCardContent(i);
+            focusCursor(i)
+        } else {
+
+            removeFocusCursor(i)
+            hideCardContent(i);
+        }
+        styles('card_' + i, x_prop, y_prop, z_prop, opacity_prop, shadow_prop, index == i);
+    }
+}
+
+function loopCardAnimated() {
+    if (timeoutCardAnimated) {
+        clearTimeout(timeoutCardAnimated)
+    }
+    timeoutCardAnimated = setInterval(() => {
+        currentCursor++
+        if (currentCursor > cardLength) {
+            currentCursor = 1;
+        }
+        getCardAnimated(currentCursor)
+    }, 10000)
+}
