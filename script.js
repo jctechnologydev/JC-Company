@@ -137,14 +137,25 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const openBtn = document.getElementById('open_btn');
-    const sidebar = document.getElementById('sidebar');
+  const openBtn = document.getElementById('open_btn');
+  const sidebar = document.getElementById('sidebar');
 
-    if (openBtn && sidebar) {
-        openBtn.addEventListener('click', function () {
-            sidebar.classList.toggle('open-sidebar');
-        });
-    }
+  if (openBtn && sidebar) {
+    openBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      sidebar.classList.toggle('open-sidebar');
+    });
+
+    // Fecha quando clicar fora
+    document.addEventListener('click', function (e) {
+      const isClickInsideSidebar = sidebar.contains(e.target);
+      const isClickOnButton = openBtn.contains(e.target);
+
+      if (!isClickInsideSidebar && !isClickOnButton) {
+        sidebar.classList.remove('open-sidebar');
+      }
+    });
+  }
 });
 
 /* Animated Slider cards Styles */
