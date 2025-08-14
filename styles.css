@@ -366,7 +366,7 @@ button:hover {
   .container {
     flex-direction: column;
     align-items: center;
-    margin-left: -64%;
+    margin-left: -36%;
     width: 100%;
     height: 100%;
   }
@@ -1145,7 +1145,7 @@ footer {
 
 .side-item:hover:not(.active),
 #logout_btn:hover {
-  background-color: #fa4802;
+  background-color: #f7f4f4;
 }
 .side-item a {
   text-decoration: none;
@@ -1172,7 +1172,7 @@ footer {
   justify-content: center;
   display: flex;
   top: 30px;
- 
+
   right: -50px;
   background-color: #ee4406;
   color: #e3e9f7;
@@ -1347,6 +1347,9 @@ footer {
     bottom: 48px;
     left: 50%;
   }
+  .btn-wrap {
+    margin-right: -40%;
+  }
 }
 
 .animated-slider-container .btn-wrap .btn {
@@ -1357,7 +1360,7 @@ footer {
   transition: all 0.4s ease-in-out;
   opacity: 0.6;
   border-radius: 8px;
-  background-color: #ff4500;
+  background-color: #444343;
 }
 
 .animated-slider-container .btn-wrap .focus {
